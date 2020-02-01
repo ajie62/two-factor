@@ -115,13 +115,7 @@ class UserAuthenticator extends AbstractGuardAuthenticator
      */
     public function checkCredentials($credentials, UserInterface $user): bool
     {
-        $encoder = $this->encoderFactory->getEncoder($user);
-
-        return $encoder->isPasswordValid(
-            $user->getPassword(),
-            $credentials['secret'],
-            $user->getSalt()
-        );
+        return true; // Check credentials if password, but here anything is accepted.
     }
 
     /**

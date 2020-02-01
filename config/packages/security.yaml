@@ -3,6 +3,10 @@ security:
         app_users:
             id: App\Security\UserProvider
 
+    # encoders:
+    #     App\Entity\User:
+    #         algorithm: 'auto'
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
