@@ -17,7 +17,7 @@ security:
                     - App\Security\UserAuthenticator
             logout:
                 path:   app_logout
-                target: app_login
+                target: app_index
 
     access_control:
         - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
