@@ -1,4 +1,10 @@
 {
+    "bacon/bacon-qr-code": {
+        "version": "2.0.0"
+    },
+    "dasprid/enum": {
+        "version": "1.0.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -129,6 +135,9 @@
     "ocramius/proxy-manager": {
         "version": "2.6.1"
     },
+    "paragonie/constant_time_encoding": {
+        "version": "v2.3.0"
+    },
     "php": {
         "version": "7.4"
     },
@@ -140,6 +149,9 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "1.0.1"
+    },
+    "pragmarx/google2fa": {
+        "version": "v5.0.0"
     },
     "psr/cache": {
         "version": "1.0.1"
