@@ -1,11 +1,8 @@
 security:
-    providers:
+
+    providers :
         app_users:
             id: App\Security\UserProvider
-
-    # encoders:
-    #     App\Entity\User:
-    #         algorithm: 'auto'
 
     firewalls:
         dev:
@@ -18,11 +15,10 @@ security:
             guard:
                 authenticators:
                     - App\Security\UserAuthenticator
-
             logout:
-                path: app_logout
+                path:   app_logout
                 target: app_login
 
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/dashboard, roles: ROLE_USER }

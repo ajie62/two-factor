@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container" style="width: 500px;">
+        {% for label, messages in app.flashes(['warning', 'error']) %}
+            {% for message in messages %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div style="margin-bottom: 20px">
+            {% if svg is not null %}
+                {{ svg | raw }}
+                <p>Please, download the Google Authenticator app, add a new account, and then scan this barcode to set up your account</p>
+            {% else %}
+                Please send code provided by the Google Authenticator app.
+            {% endif %}
+        </div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary float-right">Submit</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
