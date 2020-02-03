@@ -14,6 +14,11 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
+        // Already logged in users shouldn't be able to reach the login page.
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_dashboard');
+        }
+
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastLogin = $authenticationUtils->getLastUsername();
 
